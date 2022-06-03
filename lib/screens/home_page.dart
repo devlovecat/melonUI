@@ -1,8 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:carousel_slider/carousel_slider.dart';
+import 'package:getwidget/getwidget.dart';
+import 'package:melon_ui/screens/image_slider.dart';
 
-class HomePage extends StatelessWidget {
+class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
 
+  @override
+  State<HomePage> createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -13,7 +21,9 @@ class HomePage extends StatelessWidget {
           leading: Icon(Icons.music_video_outlined),
           actions: [
             Icon(Icons.account_circle),
-            SizedBox(width: 16,),
+            SizedBox(
+              width: 16,
+            ),
             Icon(Icons.menu),
           ],
           floating: true,
@@ -24,66 +34,7 @@ class HomePage extends StatelessWidget {
       ],
       body: ListView(
         children: [
-          Container(
-            child: Text('1111'),
-            height: 100,
-          ),
-          Container(
-            child: Text('2222'),
-            height: 100,
-          ),
-          Container(
-            child: Text('3333'),
-            height: 100,
-          ),
-          Container(
-            child: Text('4444'),
-            height: 100,
-          ),
-          Container(
-            child: Text('5555'),
-            height: 100,
-          ),
-          Container(
-            child: Text('1111'),
-            height: 100,
-          ),
-          Container(
-            child: Text('2222'),
-            height: 100,
-          ),
-          Container(
-            child: Text('3333'),
-            height: 100,
-          ),
-          Container(
-            child: Text('4444'),
-            height: 100,
-          ),
-          Container(
-            child: Text('5555'),
-            height: 100,
-          ),
-          Container(
-            child: Text('1111'),
-            height: 100,
-          ),
-          Container(
-            child: Text('2222'),
-            height: 100,
-          ),
-          Container(
-            child: Text('3333'),
-            height: 100,
-          ),
-          Container(
-            child: Text('4444'),
-            height: 100,
-          ),
-          Container(
-            child: Text('5555'),
-            height: 100,
-          ),
+          ImageSlider(),
         ],
       ),
     ));
